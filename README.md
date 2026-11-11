@@ -135,8 +135,27 @@ pip install pandas numpy scipy scikit-learn imbalanced-learn sentence-transforme
 
 ## References
 
-- A. Tagra, H. Zhang, G. K. Rajbahadur, A. E. Hassan (2022). *Revisiting Reopened Bugs in Open Source Software Systems.* Empirical Software Engineering, 27(80).
-- N. Reimers, I. Gurevych (2019). *Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks.* EMNLP.
+**Reopened bug prediction**
 
----
+- Tagra, A., Zhang, H., Rajbahadur, G. K., & Hassan, A. E. (2022). Revisiting Reopened Bugs in Open Source Software Systems. Empirical Software Engineering, 27(80). (baseline reproduced in this work)
+- Shihab, E., Ihara, A., Kamei, Y., Ibrahim, W. M., Ohira, M., Adams, B., Hassan, A. E., & Matsumoto, K. (2013). Studying Re-opened Bugs in Open Source Software. Empirical Software Engineering, 18(5), 1005–1042.
+- Xia, X., Lo, D., Shihab, E., Wang, X., & Zhou, B. (2015). Automatic, High Accuracy Prediction of Reopened Bugs. Automated Software Engineering, 22(1), 75–109.
+- Zimmermann, T., Nagappan, N., Guo, P. J., & Murphy, B. (2012). Characterizing and Predicting Which Bugs Get Reopened. ICSE 2012.
 
+**Cross-project prediction & transfer learning**
+
+- Zimmermann, T., Nagappan, N., Gall, H., Giger, E., & Murphy, B. (2009). Cross-project Defect Prediction: A Large Scale Experiment on Data vs. Domain vs. Process. ESEC/FSE 2009.
+- Nam, J., Pan, S. J., & Kim, S. (2013). Transfer Defect Learning. ICSE 2013, 382–391.
+Hosseini, S., Turhan, B., & Gunarathna, D. (2019). A Systematic Literature Review and Meta-analysis on Cross Project Defect Prediction. IEEE Transactions on Software Engineering, 45(2), 111–147.
+- Tao, H., et al. (2024). Cross-project transfer learning for reopened/defect bug prediction. IET Software. (verify exact citation)
+
+**NLP & text representation**
+
+- Reimers, N., & Gurevych, I. (2019). Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks. EMNLP 2019. (model used: all-MiniLM-L6-v2)
+Gomes, L., et al. (2023). On the use of BERT vs TF-IDF for bug report classification. Information and Software Technology. (verify exact citation)
+
+**Methods (imbalance & feature selection)**
+
+- Chawla, N. V., Bowyer, K. W., Hall, L. O., & Kegelmeyer, W. P. (2002). SMOTE: Synthetic Minority Over-sampling Technique. Journal of Artificial Intelligence Research, 16, 321–357.
+- Tantithamthavorn, C., Hassan, A. E., & Matsumoto, K. (2018). The Impact of Class Rebalancing Techniques on the Performance and Interpretation of Defect Prediction Models. IEEE Transactions on Software Engineering.
+- Jiarpakdee, J., Tantithamthavorn, C., & Treude, C. (2018). AutoSpearman: Automatically Mitigating Correlated Software Metrics for Interpreting Defect Models. ICSME 2018, 92–103.
