@@ -2,8 +2,6 @@
 
 **An empirical study of transferability, semantic embeddings, and data-quality confounds in reopened-bug prediction.**
 
-MSc Data Analytics — Research Practicum · National College of Ireland
-
 ---
 
 ## Overview
@@ -91,9 +89,8 @@ The short answer, after a thorough and honest evaluation, is **no** — reopened
 .
 ├── notebooks/
 │   ├── 01_data_setup.ipynb          # dataset verification, class balance, per-project summary
-│   ├── 02_baseline.ipynb            # Tagra baseline reproduction + data-quality confound analysis
-│   ├── 03_cross_project.ipynb       # embeddings, leave-one-project-out, numeric/embeddings variants
-│   └── 04_mixed_project.ipynb       # within-only vs augmented experiment
+│   ├── 02_baseline rebuild.ipynb            # Tagra baseline reproduction + data-quality confound analysis
+│   ├── 03_Augmented project exp.ipynb       # embeddings, leave-one-project-out, numeric/embeddings variants
 ├── data/
 │   ├── joined_project_dataframe_*.csv   # 47 per-project datasets (not redistributed — see Tagra et al.)
 │   └── emb_*.npy                        # cached Sentence-BERT embeddings per project
@@ -105,9 +102,6 @@ The short answer, after a thorough and honest evaluation, is **no** — reopened
 │   └── small_projects_full.csv          # mixed-project results (small projects)
 └── README.md
 ```
-
-> Adjust the notebook/file names above to match your actual files.
-
 ---
 
 ## How to run
@@ -123,11 +117,10 @@ pip install pandas numpy scipy scikit-learn imbalanced-learn sentence-transforme
 ### Steps
 1. Place the 47 project CSVs in `data/`.
 2. Run `01_data_setup` to verify the dataset.
-3. Run `02_baseline` to reproduce the per-project baseline and the confound analysis.
-4. Run `03_cross_project` — this generates and caches the embeddings (`emb_*.npy`, a one-time ~CPU-heavy step), then runs the leave-one-project-out experiments.
-5. Run `04_mixed_project` for the augmented experiment.
+3. Run `02_baseline rebuild` to reproduce the per-project baseline and the confound analysis.
+4. Run `03_Augmented project exp` — this generates and caches the embeddings (`emb_*.npy`, a one-time ~CPU-heavy step), then runs the leave-one-project-out experiments.
 
-> Embeddings are cached to `.npy` files, so they are computed only once. All experiment loops save to CSV and are resumable.
+
 
 ---
 
@@ -147,8 +140,3 @@ pip install pandas numpy scipy scikit-learn imbalanced-learn sentence-transforme
 
 ---
 
-## Author
-
-**AR (Akshaya Ramkumar)** — MSc Data Analytics, National College of Ireland.
-
-*This repository documents an honest empirical evaluation: a rigorous negative result, with a mechanistic explanation and a novel data-quality finding.*
